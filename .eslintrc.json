@@ -1,0 +1,106 @@
+{
+  "plugins": ["promise", "@typescript-eslint/eslint-plugin"],
+  "extends": [
+    "airbnb-base",
+    "plugin:promise/recommended",
+    "plugin:import/typescript",
+    "airbnb-typescript/base",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "project": "./tsconfig.json"
+  },
+  "env": {},
+  "reportUnusedDisableDirectives": true,
+  "rules": {
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never"
+      }
+    ],
+    "promise/prefer-await-to-then": "error",
+    "import/no-commonjs": "error",
+    "import/no-unused-modules": [
+      "error",
+      {
+        "missingExports": true,
+        "unusedExports": true,
+        "ignoreExports": [
+          "cli.ts"
+        ]
+      }
+    ],
+    "import/no-import-module-exports": "error",
+    "import/prefer-default-export": "off",
+    "max-len": [
+      "error", 180, 2, {
+        "ignoreUrls": true,
+        "ignoreComments": false,
+        "ignoreRegExpLiterals": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "max-statements-per-line": ["error", {"max": 1}],
+    "no-else-return": "off",
+    "func-names": ["error"],
+    "func-style": ["error", "expression", {"allowArrowFunctions": true}],
+    "brace-style": ["error", "1tbs", {"allowSingleLine": false}],
+    "curly": ["error", "all"],
+    "object-curly-newline": [
+      "error", {
+        "ObjectExpression": {"multiline": true, "consistent": true},
+        "ObjectPattern": {"multiline": true, "consistent": true},
+        "ImportDeclaration": {"multiline": true},
+        "ExportDeclaration": {"multiline": true}
+      }
+    ],
+    "comma-dangle": "off",
+    "@typescript-eslint/comma-dangle": [
+      "error", {
+        "arrays": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "never",
+        "imports": "always-multiline",
+        "objects": "always-multiline",
+        "enums": "always-multiline"
+      }
+    ],
+    "import/order": ["error", {"groups": [["builtin", "external"], "parent", "sibling", "index"], "newlines-between": "never"}],
+    "import/no-extraneous-dependencies": [
+      "error", {
+        "devDependencies": false,
+        "optionalDependencies": false
+      }
+    ],
+    "@typescript-eslint/member-delimiter-style": [
+      "error", {
+        "multiline": {
+          "delimiter": "comma",
+          "requireLast": true
+        },
+        "singleline": {
+          "delimiter": "comma",
+          "requireLast": false
+        }
+      }
+    ],
+    "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
+    "@typescript-eslint/consistent-type-imports": [
+      "error", {
+        "prefer": "type-imports",
+        "disallowTypeAnnotations": true
+      }
+    ],
+    "@typescript-eslint/explicit-module-boundary-types": "error",
+    "@typescript-eslint/no-misused-promises": "error",
+    "@typescript-eslint/no-unused-vars": ["error", {"argsIgnorePattern": "^_", "ignoreRestSiblings": true, "args":  "all", "caughtErrors": "all", "caughtErrorsIgnorePattern": "^_"}]
+  }
+}

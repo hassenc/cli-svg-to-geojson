@@ -1,0 +1,19 @@
+{
+  "include": ["./*"],
+  "compilerOptions": {
+    "target": "es6",
+    "module": "es6",
+    "lib": ["es2019", "dom"],
+    "strict": true,
+    "isolatedModules": true,
+    "noImplicitAny": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "importsNotUsedAsValues": "error",
+    "resolveJsonModule": true
+  },
+}

@@ -1,0 +1,22 @@
+.DS_Store
+.idea
+# Yarn
+.yarn/*
+yarn-error.log
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+
+# Build
+convert.*.json
+node_modules
+coverage
+build
+build-dev
+
+
+# misc
+env.list
+*.zip
